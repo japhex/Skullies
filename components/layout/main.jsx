@@ -1,6 +1,6 @@
-import { AppProvider } from 'context/AppContext'
-import { LayoutMain } from 'components/layout/main.styled'
 import { GlobalStyle } from 'components/layout/global.styled'
+import { LayoutMain } from 'components/layout/main.styled'
+import { AppProvider } from 'context/AppContext'
 
 export default function Main({ children }) {
   return (

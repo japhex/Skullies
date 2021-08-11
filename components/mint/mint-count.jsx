@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import { MintAmount, MintIcon } from './mint.styled'
 
 export default function MintCount() {

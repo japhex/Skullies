@@ -1,14 +1,14 @@
 import Head from 'next/head'
-import { web3Modal } from 'helpers/Web3Modal'
+
 import Main from 'components/layout/main'
+import MintCount from 'components/mint/mint-count'
 import {
   MintContainer,
   Mint,
-  MintAmount,
   Conditions,
   Description,
 } from 'components/mint/mint.styled'
-import MintCount from 'components/mint/mint-count'
+import { web3Modal } from 'helpers/Web3Modal'
 
 export default function Home() {
   return (
