@@ -4,15 +4,14 @@ import { Contract } from '@ethersproject/contracts'
 import { formatEther } from '@ethersproject/units'
 
 import { ABI, TARGET_ADDRESS, NETWORK } from 'helpers/constants'
-import { loadWeb3Modal } from 'helpers/Web3Modal'
+import { loadWeb3Modal, web3Modal } from 'helpers/Web3Modal'
 
 export const AppContext = createContext({})
 
 export const AppProvider = ({ children }) => {
   const [contextProps, setContextProps] = useState({})
 
-  const getContract = async () => {
-    const web3provider = await loadWeb3Modal()
+  const getContract = async web3provider => {
     const network = await web3provider.getNetwork()
     const signer = await web3provider.getSigner()
     const address = (await signer.getAddress()).toLowerCase()
@@ -39,11 +38,15 @@ export const AppProvider = ({ children }) => {
     })
   }
 
-  useEffect(() => {
-    getContract()
+  useEffect(async () => {
+    if (web3Modal.cachedProvider === 'injected') {
+      getContract(await loadWeb3Modal())
+    }
   }, [])
 
   return (
-    <AppContext.Provider value={contextProps}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ getContract, ...contextProps }}>
+      {children}
+    </AppContext.Provider>
   )
 }

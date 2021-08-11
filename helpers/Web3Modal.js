@@ -19,12 +19,7 @@ export const web3Modal = process.browser
   : null
 
 export const logoutOfWeb3Modal = async () => {
-  await web3Modal.clearCachedProvider()
-  setTimeout(() => {
-    if (process.browser) {
-      window.location.reload()
-    }
-  }, 1)
+  return web3Modal.clearCachedProvider()
 }
 
 export const loadWeb3Modal = async () => {

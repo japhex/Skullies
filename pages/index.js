@@ -1,5 +1,8 @@
+import { useEffect, useState } from 'react'
+
 import Head from 'next/head'
 
+import Account from 'components/account'
 import Main from 'components/layout/main'
 import MintCount from 'components/mint/mint-count'
 import {
@@ -8,16 +11,18 @@ import {
   Conditions,
   Description,
 } from 'components/mint/mint.styled'
-import { web3Modal } from 'helpers/Web3Modal'
 
-export default function Home() {
+const Home = () => {
+  const [connected, setConnected] = useState(false)
+
   return (
     <Main>
       <Head>
         <title>Skullies</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {web3Modal && web3Modal.cachedProvider ? (
+      <Account setConnected={setConnected} />
+      {connected && (
         <MintContainer>
           <Mint>MINT</Mint>
           <MintCount />
@@ -27,9 +32,9 @@ export default function Home() {
           </Conditions>
           <Description>Skullies will be released in batches of 33</Description>
         </MintContainer>
-      ) : (
-        <>Please connect your wallet</>
       )}
     </Main>
   )
 }
+
+export default Home
