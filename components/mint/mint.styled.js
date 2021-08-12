@@ -37,8 +37,8 @@ export const MintAmount = styled.div`
   font-family: 'Eusthalia Sans Stamped';
 
   @media ${theme.breakpoints.mobileDown} {
-    top: 139px;
-    left: 202px;
+    top: 141px;
+    left: 204px;
     font-size: 23px;
   }
 `
@@ -54,7 +54,7 @@ export const Conditions = styled.div`
   line-height: 2rem;
 
   @media ${theme.breakpoints.mobileDown} {
-    top: 183px;
+    top: 188px;
     left: 144px;
   }
 `
@@ -68,8 +68,8 @@ export const Description = styled.div`
   text-align: center;
 
   @media ${theme.breakpoints.mobileDown} {
-    top: 251px;
-    left: 74px;
+    top: 256px;
+    left: 77px;
     font-size: 33px;
   }
 `
@@ -81,7 +81,7 @@ export const MintIcon = styled.div`
   cursor: pointer;
 
   @media ${theme.breakpoints.mobileDown} {
-    top: ${({ minus }) => (minus ? '137px' : '135px')};
-    left: ${({ minus }) => (minus ? '129px' : '253px')};
+    top: ${({ minus }) => (minus ? '137px' : '137px')};
+    left: ${({ minus }) => (minus ? '130px' : '255px')};
   }
 `
