@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { theme } from 'themes/default.styled'
+
 export const MintContainer = styled.div`
   position: relative;
   background: url(images/mint.png) no-repeat;
@@ -7,6 +9,11 @@ export const MintContainer = styled.div`
   width: 450px;
   height: 425px;
   margin-top: 50px;
+
+  @media ${theme.breakpoints.mobileDown} {
+    width: 100%;
+    height: 378px;
+  }
 `
 
 export const Mint = styled.div`
@@ -14,6 +21,12 @@ export const Mint = styled.div`
   top: 38px;
   left: 181px;
   font-size: 5rem;
+
+  @media ${theme.breakpoints.mobileDown} {
+    top: 37px;
+    left: 163px;
+    font-size: 4rem;
+  }
 `
 
 export const MintAmount = styled.div`
@@ -22,6 +35,12 @@ export const MintAmount = styled.div`
   left: 227px;
   font-size: 25px;
   font-family: 'Eusthalia Sans Stamped';
+
+  @media ${theme.breakpoints.mobileDown} {
+    top: 139px;
+    left: 202px;
+    font-size: 23px;
+  }
 `
 export const Conditions = styled.div`
   display: flex;
@@ -33,6 +52,11 @@ export const Conditions = styled.div`
   left: 167px;
   font-size: 35px;
   line-height: 2rem;
+
+  @media ${theme.breakpoints.mobileDown} {
+    top: 183px;
+    left: 144px;
+  }
 `
 export const Description = styled.div`
   width: 290px;
@@ -42,6 +66,12 @@ export const Description = styled.div`
   color: #fff;
   font-size: 39px;
   text-align: center;
+
+  @media ${theme.breakpoints.mobileDown} {
+    top: 251px;
+    left: 74px;
+    font-size: 33px;
+  }
 `
 
 export const MintIcon = styled.div`
@@ -49,4 +79,9 @@ export const MintIcon = styled.div`
   top: 156px;
   left: ${({ minus }) => (minus ? '146px' : '284px')};
   cursor: pointer;
+
+  @media ${theme.breakpoints.mobileDown} {
+    top: ${({ minus }) => (minus ? '137px' : '135px')};
+    left: ${({ minus }) => (minus ? '129px' : '253px')};
+  }
 `
