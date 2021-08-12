@@ -8,7 +8,7 @@ export default function Main({ children }) {
       <GlobalStyle />
       <LayoutMain>
         <Logo src="images/logo_new.gif" />
-        <Dice src="images/dice.png" width="400px" />
+        <Dice src="images/dice.png" />
         {children}
       </LayoutMain>
     </AppProvider>
