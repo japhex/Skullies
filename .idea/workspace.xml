@@ -20,7 +20,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="$USER_HOME$/.nvm/versions/node/v14.16.0/bin/node" />
@@ -36,11 +36,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/components/mint" />
       <recent name="$PROJECT_DIR$/components/layout" />
       <recent name="$PROJECT_DIR$/pages" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/images" />
@@ -58,7 +58,7 @@
       <workItem from="1628325733545" duration="17000" />
       <workItem from="1628325814008" duration="1000" />
       <workItem from="1628326105875" duration="462000" />
-      <workItem from="1628326585180" duration="17468000" />
+      <workItem from="1628326585180" duration="17680000" />
     </task>
     <servers />
   </component>

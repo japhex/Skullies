@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { theme } from 'themes/default.styled'
+
 export const LayoutMain = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,4 +11,12 @@ export const LayoutMain = styled.div`
   height: 100vh;
   background: url(images/background.png);
   background-size: cover;
+`
+
+export const Logo = styled.img`
+  width: 450px;
+
+  @media ${theme.breakpoints.tabletDown} {
+    width: 100%;
+  }
 `
