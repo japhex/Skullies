@@ -20,3 +20,12 @@ export const Logo = styled.img`
     width: 100%;
   }
 `
+
+export const Dice = styled.img`
+  width: 400px;
+
+  @media ${theme.breakpoints.tabletDown} {
+    width: 70%;
+    margin-top: 10px;
+  }
+`
