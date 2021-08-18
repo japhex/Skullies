@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 
+import { AccountLink } from 'components/styled/account.styled'
 import { AppContext } from 'context/AppContext'
 import { logoutOfWeb3Modal, web3Modal, loadWeb3Modal } from 'helpers/Web3Modal'
 
@@ -19,19 +20,9 @@ const Account = ({ setConnected }) => {
   }
 
   return (
-    <>
-      <span
-        style={{
-          color: '#fff',
-          fontSize: '40px',
-          marginTop: '15px',
-          cursor: 'pointer',
-        }}
-        onClick={handleClick}
-      >
-        {connected ? 'Logout' : 'Login to wallet'}
-      </span>
-    </>
+    <AccountLink onClick={handleClick}>
+      {connected ? 'Logout' : 'Login to wallet'}
+    </AccountLink>
   )
 }
 
