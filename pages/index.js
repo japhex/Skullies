@@ -11,9 +11,12 @@ import {
   Conditions,
   Description,
 } from 'components/mint/mint.styled'
+import { web3Modal } from 'helpers/Web3Modal'
 
 const Home = () => {
-  const [connected, setConnected] = useState(false)
+  const [connected, setConnected] = useState(
+    web3Modal && web3Modal.cachedProvider
+  )
 
   return (
     <Main>
